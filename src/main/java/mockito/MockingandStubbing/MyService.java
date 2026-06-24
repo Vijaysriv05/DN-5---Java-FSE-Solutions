@@ -1,4 +1,4 @@
-package mockito;
+package mockito.MockingandStubbing;
 
 public class MyService {
 

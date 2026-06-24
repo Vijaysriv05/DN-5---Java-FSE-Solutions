@@ -1,36 +1,47 @@
 package mockito;
 
-import org.junit.jupiter.api.Test;
+import mockito.MockingandStubbing.ExternalApi;
+import mockito.MockingandStubbing.MyService;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
+import org.mockito.Mockito;
 
 public class MyServiceTest {
 
     @Test
     void testMockingAndStubbing() {
 
-        ExternalApi mockApi = mock(ExternalApi.class);
+        ExternalApi mockApi =
+                Mockito.mock(ExternalApi.class);
 
-        when(mockApi.getData())
+        Mockito.when(mockApi.getData())
                 .thenReturn("Mock Data");
 
-        MyService service = new MyService(mockApi);
+        MyService service =
+                new MyService(mockApi);
 
-        String result = service.fetchData();
+        String result =
+                service.fetchData();
 
-        assertEquals("Mock Data", result);
+        Assertions.assertEquals(
+                "Mock Data",
+                result
+        );
     }
 
     @Test
     void testVerifyInteraction() {
 
-        ExternalApi mockApi = mock(ExternalApi.class);
+        ExternalApi mockApi =
+                Mockito.mock(ExternalApi.class);
 
-        MyService service = new MyService(mockApi);
+        MyService service =
+                new MyService(mockApi);
 
         service.fetchData();
 
-        verify(mockApi).getData();
+        Mockito.verify(mockApi)
+                .getData();
     }
 }
