@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Documents/WEEK_2/SpringCore/LibrarayManagement/src/main/Week2/SpringCore/SpringCore.iml" filepath="$PROJECT_DIR$/../Documents/WEEK_2/SpringCore/LibrarayManagement/src/main/Week2/SpringCore/SpringCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Documents/WEEK_2/SpringCore/LibrarayManagement/src/main/Week2/Week2.iml" filepath="$PROJECT_DIR$/../Documents/WEEK_2/SpringCore/LibrarayManagement/src/main/Week2/Week2.iml" />
+    </modules>
+  </component>
+</project>
