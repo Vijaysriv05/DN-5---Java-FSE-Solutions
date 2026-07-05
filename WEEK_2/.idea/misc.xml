@@ -5,6 +5,9 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringDataJPA/pom.xml" />
+        <option value="$PROJECT_DIR$/../SpringData_JPA/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringCore/LibrarayManagement/pom.xml" />
       </list>
     </option>
   </component>
