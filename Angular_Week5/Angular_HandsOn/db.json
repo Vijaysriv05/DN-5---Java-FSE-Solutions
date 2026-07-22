@@ -1,0 +1,73 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Data Structures & Algorithms",
+      "code": "CS101",
+      "credits": 4,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 2,
+      "name": "Web Development with Angular",
+      "code": "CS202",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 3,
+      "name": "Database Management Systems",
+      "code": "CS303",
+      "credits": 3,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": 4,
+      "name": "Operating Systems",
+      "code": "CS404",
+      "credits": 4,
+      "gradeStatus": "failed"
+    },
+    {
+      "id": 5,
+      "name": "Cloud Computing & DevOps",
+      "code": "CS505",
+      "credits": 2,
+      "gradeStatus": "passed"
+    }
+  ],
+  "students": [
+    {
+      "id": 101,
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "gpa": 3.8,
+      "enrolledCount": 3
+    },
+    {
+      "id": 102,
+      "name": "Bob Smith",
+      "email": "bob@example.com",
+      "gpa": 3.5,
+      "enrolledCount": 2
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1,
+      "studentName": "Alice Johnson",
+      "studentEmail": "alice@example.com",
+      "courseId": 1,
+      "preferredSemester": "Odd",
+      "agreeToTerms": true
+    },
+    {
+      "id": 2,
+      "studentName": "Alice Johnson",
+      "studentEmail": "alice@example.com",
+      "courseId": 2,
+      "preferredSemester": "Even",
+      "agreeToTerms": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<div class="course-list-container">
+  <h2>Available Courses Catalogue</h2>
+
+  <!-- Step 24: Display selected course ID -->
+  <div *ngIf="selectedCourseId !== null" class="selection-banner">
+    Selected course ID: <strong>{{ selectedCourseId }}</strong>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-banner">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Step 25: Loading state -->
+  <div *ngIf="isLoading; else courseGrid" class="loading-spinner-box">
+    <div class="spinner"></div>
+    <p>Loading courses...</p>
+  </div>
+
+  <!-- Step 26 & 28: *ngFor with trackBy and *ngIf with else block -->
+  <ng-template #courseGrid>
+    <div *ngIf="courses.length > 0; else noCourses" class="grid-container">
+      <app-course-card
+        *ngFor="let course of courses; trackBy: trackByCourseId"
+        [course]="course"
+        [isEnrolled]="isEnrolled(course.id)"
+        (enrollRequested)="onEnroll($event)"
+      ></app-course-card>
+    </div>
+  </ng-template>
+
+  <!-- Step 28: Empty template -->
+  <ng-template #noCourses>
+    <div class="empty-state">
+      <p>No courses available.</p>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,52 @@
+<div class="home-container">
+  <div class="welcome-banner">
+    <h1>Welcome to {{ portalName }}</h1>
+    <p class="description">
+      Empowering digital learners with comprehensive course management, real-time enrollment tracking, and interactive academic progress tools.
+    </p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <h3>Available Courses</h3>
+      <p class="stat-number">{{ courseCount }}</p>
+    </div>
+    <div class="stat-card">
+      <h3>Enrolled</h3>
+      <p class="stat-number">3</p>
+    </div>
+    <div class="stat-card">
+      <h3>GPA</h3>
+      <p class="stat-number">3.8</p>
+    </div>
+  </div>
+
+  <div class="interactive-section">
+    <h3>Interactive Demonstrations</h3>
+
+    <!-- Step 12 & 13: Property binding & Event binding -->
+    <div class="action-box">
+      <button class="btn btn-primary" [disabled]="!isPortalActive" (click)="onEnrollClick()">
+        Enroll Now
+      </button>
+      <p *ngIf="message" class="message-text">{{ message }}</p>
+    </div>
+
+    <!-- Step 14: Two-way binding with ngModel -->
+    <div class="search-box">
+      <label for="searchInput">Search Portal Courses:</label>
+      <input
+        id="searchInput"
+        type="text"
+        class="form-control"
+        placeholder="Type to search..."
+        [(ngModel)]="searchTerm"
+      />
+      <p class="live-search">Searching for: <strong>{{ searchTerm }}</strong></p>
+    </div>
+  </div>
+
+  <!-- Component-level provider test & summary widget -->
+  <app-notification></app-notification>
+  <app-course-summary-widget></app-course-summary-widget>
+</div>

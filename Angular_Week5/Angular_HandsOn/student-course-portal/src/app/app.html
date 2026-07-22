@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<div *ngIf="isLoading$ | async" class="global-loading-overlay">
+  <div class="spinner"></div>
+  <span>Communicating with backend API...</span>
+</div>
+
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
